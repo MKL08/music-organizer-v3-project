@@ -54,10 +54,14 @@ public class MusicOrganizer
     
     public void listMatching(String searchString)
     {
+        boolean matchFound = false;
         for (String filename : files) {
             if(filename.contains(searchString)) {
                 System.out.println(filename);
             }
+        }
+        if (matchFound) {
+            System.out.println("no matches found");
         }
     }
     
